@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+/* ------------------------mobile viewport bug fix----------------------- */
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.main {
+  height: 0;
+  flex: auto;
+  overflow-y: scroll;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.header__title {
+  width: 100%;
+  height: 70px;
+  background-color: #fbfb87;
+  text-align: center;
+  font-size: 2rem;
+  /* font-weight: bold; */
+  line-height: 4.2rem;
+}
+
+.header__setting {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(122, 122, 122);
+  text-align: center;
+}
+
+.header__setting--btn {
+  display: flex;
+}
+
+.header__setting--msg-title {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header__setting--msg-toggle-btn {
+  text-align: right;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.header__setting--msg {
+  border-bottom: 1px solid rgb(122, 122, 122);
+}
+
+.header__setting--btn {
+  display: flex;
+  height: 40px;
+}
+
+.header__setting--btn-msg,
+.header__setting--btn-teacher-list {
+  width: 50%;
+  background-color: white;
+  border: none;
+}
+
+.header__setting--btn-msg {
+  border-right: 1px solid rgb(122, 122, 122);
+}
+
+.main__msg-box {
+  height: 120px;
+  border: 1px solid rgb(122, 122, 122);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main__msg-box--img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 50px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.main__msg-box--notification {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 10px;
+  top: -15px;
+}
+
+.main__msg-box--notification-time {
+  font-size: 0.7rem;
+  position: relative;
+  top: -10px;
+  right: 10px;
+  width: 30px;
+}
+
+.main__msg-box--notification-amount {
+  /* flex-basis: */
+  font-size: 0.8rem;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 1.1rem;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+}
+.main__msg-box--contents-title {
+  font-size: 1.2rem;
+}
+
+.main__msg-box--contents-small-text {
+  font-size: 0.7rem;
+  color: rgb(75, 75, 75);
+  line-height: 1.5rem;
+}
+
+.main__msg-box--contents-main {
+  line-height: 1.2rem;
+}
+
+.footer {
+  height: 75px;
+  background-color: white;
+  border-top: 1px solid grey;
+}
+
+.footer__menu {
+  display: flex;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 11px;
+}
+
+.footer__menu--flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.fa-home,
+.fa-user-friends,
+.fa-comment-alt,
+.fa-grin {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}

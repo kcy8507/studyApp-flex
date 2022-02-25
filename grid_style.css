@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+.container {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 80px 50px 600px 80px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: dense;
+  /* grid-template-areas:
+    "header header"
+    "nav nav"
+    "main"
+    "menu menu menu menu"; */
+}
+
+/* header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+menu {
+  grid-area: menu;
+} */
+
+.items {
+  /* border: 1px solid tomato; */
+}
+
+.items:nth-child(1) {
+  grid-column: span 3;
+}
+
+.items:nth-child(3) {
+  grid-column: span 2;
+}
+
+.items:nth-child(4) {
+  grid-column: span 2;
+}
+
+.items:nth-child(5) {
+  grid-column: span 4;
+}
+
+.header__title,
+.header__icons {
+  font-size: 2rem;
+  text-align: right;
+  color: white;
+  background-color: blueviolet;
+  line-height: 3.8rem;
+  padding: 10px;
+}
+
+.fa-bell,
+.fa-cog {
+  padding-left: 4px;
+}
+
+.fa-chevron-down {
+  /* text-align: right; */
+  margin-left: 20%;
+}
+
+.header__nav {
+  border-bottom: 1px solid grey;
+  font-size: 1.3rem;
+  line-height: 2.7rem;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.nav__color-bar {
+  /* text-decoration: underline; */
+  /* text-underline-position: under; */
+  position: relative;
+}
+
+.nav__color-bar::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+  background-color: blueviolet;
+}
+
+/* .header__nav--color-bar {
+  width: 50px;
+  height: 7px;
+  position: absolute;
+  top: 15%;
+  margin-left: -50px;
+  display: inline-block;
+  background-color: blueviolet;
+} */
+
+.main__scroll {
+  overflow-y: scroll;
+}
+
+.main__title {
+  font-size: 1.3rem;
+  padding: 13px 0 13px 0;
+}
+
+.main__scroll--box-text {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding-left: 10px;
+}
+
+.main__scroll--box {
+  height: 220px;
+  border: 1px solid grey;
+  margin: 8px;
+  padding: 5px;
+  display: flex;
+}
+
+.main__scroll--box-image {
+  width: 175px;
+  height: 208px;
+  background-position: center;
+  border: 1px solid grey;
+  background-size: cover;
+  background-image: url(https://i.ytimg.com/vi/LKqTzCwV1Kc/maxresdefault.jpg);
+}
+
+.footer__icons {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  border-top: 1px solid grey;
+}
+
+.footer__icons--tag {
+  font-size: 0.8rem;
+}
